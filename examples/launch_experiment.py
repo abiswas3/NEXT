@@ -272,7 +272,7 @@ def launch_experiment(host, experiment_list, AWS_ID, AWS_KEY, AWS_BUCKET_NAME):
     #exp_key_list.append(str(exp_key))
     #widget_key_list.append(str(perm_key))
 
-    print "\nQuery Url is at: http://"+host+"/query/query_page/query_page/"+exp_uid + "\n"
+    print "\nQuery Url is at: http://"+host+"/query/query_page/query_page_fabric/"+exp_uid + "\n"
 
   print "exp_uid_list:", exp_uid_list
   #print "exp_key_list:", exp_key_list
