@@ -51,6 +51,8 @@ class RandomSamplingLinearLeastSquares:
             y.append(target_label)
         X = numpy.array(X)
         y = numpy.array(y)
+
+        
         w = numpy.linalg.lstsq(X,y)[0]
         # label_residues = numpy.dot(X,w)
         butler.algorithms.set(key='weights',value=w.tolist())

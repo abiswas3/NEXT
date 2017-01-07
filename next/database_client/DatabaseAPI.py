@@ -690,6 +690,7 @@ class DatabaseAPI(object):
                 else:
                     return False,messageCache + '\n' + messagePerm
             else:
+                utils.debug_print("DAS",doc_uid,key,value)
                 response,dt = utils.timeit(self.permStore.set)(constants.app_data_database_id,bucket_id,doc_uid,key,value)
                 didSucceedPerm,messagePerm = response
                 self.duration_permStoreSet += dt

@@ -20,7 +20,7 @@
 
 
 
-<canvas id="c1" width="800px" height="200px"></canvas>
+<canvas id="c1" width="1200px" height="200px"></canvas>
 
 <div class="col-sm-8">
   <button type="button" class="btn btn-primary btn-lg btn-block"  id="submit">Submit</button> 
@@ -92,8 +92,8 @@ for (i = 0; i < 3; i++) {
                          {"left": -200,
                           "top": canvas.height/2,
                           "lockMovementY" : true,
-                          "scaleX": 0.4,
-                          "scaleY": 0.4,
+                          "scaleX": 0.7,
+                          "scaleY": 0.7,
                           "image": true
                          });    
 }
@@ -259,7 +259,7 @@ init = function() {
 
 
 function resizeCanvas() {
-    canvas.setZoom(Math.min(1, window.innerWidth/800 )) ;
+    canvas.setZoom(Math.min(1, window.innerWidth/600 )) ;
     canvas.renderAll();
 }
 

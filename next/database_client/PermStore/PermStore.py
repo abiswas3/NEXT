@@ -642,8 +642,14 @@ class PermStore(object):
             
             value = self.makeProperDatabaseFormat(value)
 
-            message = self.client[database_id][bucket_id].update_one( {"_id":doc_uid} , { '$set': {key:value} },upsert = True )
+            doc = self.client[database_id][bucket_id].find({"_id":doc_uid})
+            utils.debug_print("PSS2",doc)
+            
+            utils.debug_print("PSS",database_id,bucket_id,doc_uid,key,value)
+            message = self.client[database_id][bucket_id].update_one( {"_id":doc_uid} , { '$set': {key:value} },upsert = True)
 
+            doc = self.client[database_id][bucket_id].find({"_id":doc_uid})
+            utils.debug_print("PSS2",doc)
             return True,''
         except:
             raise

@@ -1,11 +1,12 @@
 import json
 import next.utils as utils
 import next.apps.SimpleTargetManager
+import next.apps.LabelTargetManager
 
 class PoolBasedBinaryClassification(object):
     def __init__(self,db):
         self.app_id = 'PoolBasedBinaryClassification'
-        self.TargetManager = next.apps.SimpleTargetManager.SimpleTargetManager(db)
+        self.TargetManager = next.apps.LabelTargetManager.LabelTargetManager(db)
 
     def initExp(self, butler, init_algs, args):
         utils.debug_print("AA: "+str(args))

@@ -10,3 +10,5 @@ greenlet
 mpld3
 pyyaml
 ply
+sklearn
+
